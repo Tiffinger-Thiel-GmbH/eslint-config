@@ -1,13 +1,25 @@
-// This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-config/patch/modern-module-resolution');
-
 module.exports = {
-  extends: [ 
-    "@rushstack/eslint-config/profile/web-app",
-    "@rushstack/eslint-config/mixins/react",
-    "plugin:react-hooks/recommended",
+  extends: [
+    "plugin:@typescript-eslint/recommended",
+    "standard-with-typescript",
 
     // Has to be the last:
     "plugin:prettier/recommended"
   ],
+  parserOptions: {
+    project: "./tsconfig.json"
+  },
+  rules: {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  overrides: [
+    {
+      files: ["src/*.d.ts"],
+      rules: {
+        "@typescript-eslint/triple-slash-reference": "off"
+      }
+    }
+  ],
+  ignorePatterns: ['.eslintrc.js', '.prettierrc.js'],
 }

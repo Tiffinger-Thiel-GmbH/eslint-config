@@ -7,7 +7,6 @@
     "access": "public"
   },
   "scripts": {
-    "publish:npm": "npm publish --access public",
     "release": "release-it"
   },
   "peerDependencies": {
@@ -15,15 +14,19 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@rushstack/eslint-config": "^2.4.5",
-    "@rushstack/eslint-patch": "^1.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^v3.3.1",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.30.0",
+    "eslint": "^7.32.0",
     "release-it": "^14.11.7",
     "typescript": "^4.4.2"
   }
