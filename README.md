@@ -10,6 +10,11 @@ yarn add -D @tiffinger-thiel/eslint-config
 .eslintrc.js
 ```js
 module.exports = {
+  // Pick one profile.
+  // Possible profiles:
+  // - @tiffinger-thiel/eslint-config/profile/react
+  // - @tiffinger-thiel/eslint-config/profile/node
+  // - @tiffinger-thiel/eslint-config/profile/nest
   extends: ['@tiffinger-thiel/eslint-config/profile/react'],
   
   // The following is optional, it speeds up prettier if passed.
