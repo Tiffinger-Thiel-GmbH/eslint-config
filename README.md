@@ -43,6 +43,7 @@ Example `eslint-config/settings.json`:
 {
   "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true
 }
 ```
