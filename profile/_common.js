@@ -37,7 +37,7 @@ function buildRules(profile) {
             // This rule extends the one from @rushstack by allowing anything prefixed with "Props" without an I.
             // This is intended to be used for The React props.
             if (rule.selector === "interface" && rule.custom.regex === '^_?I[A-Z]' ) {
-              rule.custom.regex = '^(_?[A-Z]';
+              rule.custom.regex = '^_?[A-Z]';
               return rule;
             }
           }
