@@ -34,8 +34,7 @@ function buildRules(profile) {
         ...require('@rushstack/eslint-config/profile/web-app').overrides[0].rules['@typescript-eslint/naming-convention'].slice(1).map((rule) => {
           
           if (profile === "react") {
-            // This rule extends the one from @rushstack by allowing anything prefixed with "Props" without an I.
-            // This is intended to be used for The React props.
+            // Disable the need for an 'I' prefix of interfaces.
             if (rule.selector === "interface" && rule.custom.regex === '^_?I[A-Z]' ) {
               rule.custom.regex = '^_?[A-Z]';
               return rule;
