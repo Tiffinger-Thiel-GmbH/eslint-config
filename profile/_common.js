@@ -27,6 +27,9 @@ function buildRules(profile) {
         // public constructor(private readonly appService: AppService) {}
         // Which is very common in nest
         "@typescript-eslint/no-parameter-properties": "off",
+
+        // TODO: clarify - Update schemas or disable rule?
+        "@typescript-eslint/explicit-member-accessibility": "off"
        } : {}),
   
       // Override some naming rules from @rushstack
