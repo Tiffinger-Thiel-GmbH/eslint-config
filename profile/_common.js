@@ -28,8 +28,9 @@ function buildRules(profile) {
         // Which is very common in nest
         "@typescript-eslint/no-parameter-properties": "off",
 
-        // TODO: clarify - Update schemas or disable rule?
-        "@typescript-eslint/explicit-member-accessibility": "off"
+        // TODO: Compatibility with Nest Schema clarify - Update schemas or disable rules?
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/explicit-function-return-type" : "off"
        } : {}),
   
       // Override some naming rules from @rushstack
