@@ -18,6 +18,9 @@ function buildRules(profile) {
     },
     rules: {
       "no-void": "off",
+      ...(profile === "react" ? {
+        "react/no-danger": "warn"
+      } : {}),
 
       ...(profile === "nest" ? {
         // Allows something like this:
