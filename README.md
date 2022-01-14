@@ -36,7 +36,7 @@ module.exports = require('@tiffinger-thiel/eslint-config/prettier');
 ```json
 {
   "scripts": {
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix"
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
   }
 }
 ```
