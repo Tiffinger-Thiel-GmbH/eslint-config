@@ -46,12 +46,10 @@ function buildRules(profile) {
         // Pass all original configs and edit them if needed:
         ...require('@rushstack/eslint-config/profile/web-app').overrides[0].rules['@typescript-eslint/naming-convention'].slice(1).map((rule) => {
           
-          if (profile === "react") {
-            // Disable the need for an 'I' prefix of interfaces.
-            if (rule.selector === "interface" && rule.custom.regex === '^_?I[A-Z]' ) {
-              rule.custom.regex = '^_?[A-Z]';
-              return rule;
-            }
+          // Disable the need for an 'I' prefix of interfaces.
+          if (rule.selector === "interface" && rule.custom.regex === '^_?I[A-Z]' ) {
+            rule.custom.regex = '^_?[A-Z]';
+            return rule;
           }
           
           // Do not force underscores if private:
