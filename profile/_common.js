@@ -17,6 +17,12 @@ function buildRules(profile) {
       project: "./tsconfig.json"
     },
     rules: {
+      // At several places the type inference produces better types than 
+      // you would add from hand. And very complex types do not improve readability. 
+      // So it is better to just decide in each case if an explicit type helps with reading the code
+      // or not.
+      "@rushstack/typedef-var": "off",
+
       "no-void": "off",
       ...(profile === "react" ? {
         "react/no-danger": "warn"
