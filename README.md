@@ -52,3 +52,12 @@ Example `eslint-config/settings.json`:
   "editor.formatOnSave": true
 }
 ```
+
+# Release
+
+Run following 
+
+```bash
+npm run i
+npm run release
+```

@@ -13,6 +13,7 @@ function buildRules(profile) {
 
       "plugin:prettier/recommended"
     ],
+    plugins: ["react-hooks"],
     parserOptions: {
       project: "./tsconfig.json"
     },
@@ -25,7 +26,9 @@ function buildRules(profile) {
 
       "no-void": "off",
       ...(profile === "react" ? {
-        "react/no-danger": "warn"
+        "react/no-danger": "warn",
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
       } : {}),
 
       ...(profile === "nest" ? {
@@ -51,7 +54,7 @@ function buildRules(profile) {
             rule.custom.regex = '^_?[A-Z]';
             return rule;
           }
-          
+        
           // Do not force underscores if private:
           if (rule.modifiers?.length > 0 && rule.modifiers[0] === "private" && rule.leadingUnderscore === 'require' ) {
             rule.leadingUnderscore = "allow";
