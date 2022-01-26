@@ -31,12 +31,11 @@ function buildRules(profile) {
         "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
       } : {}),
 
-      ...(profile === "nest" ? {
-        // Allows something like this:
-        // public constructor(private readonly appService: AppService) {}
-        // Which is very common in nest
-        "@typescript-eslint/no-parameter-properties": "off",
+      // Allows something like this:
+      // public constructor(private readonly appService: AppService) {}
+      "@typescript-eslint/no-parameter-properties": "off",
 
+      ...(profile === "nest" ? {
         // TODO: Compatibility with Nest Schema clarify - Update schemas or disable rules?
         "@typescript-eslint/explicit-member-accessibility": "off",
         "@typescript-eslint/explicit-function-return-type" : "off"
