@@ -43,13 +43,18 @@ module.exports = require('@tiffinger-thiel/eslint-config/prettier');
 
 ## VSCode
 You only need `"dbaeumer.vscode-eslint"`. No Prettier plugin needed.
-Example `eslint-config/settings.json`:
+Example `.vscode/settings.json`:
 ```json
 {
   "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  }
 }
 ```
 
