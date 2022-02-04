@@ -18,6 +18,8 @@ function buildRules(profile) {
       project: "./tsconfig.json"
     },
     rules: {
+      "no-console": "warn",
+
       // At several places the type inference produces better types than 
       // you would add from hand. And very complex types do not improve readability. 
       // So it is better to just decide in each case if an explicit type helps with reading the code
