@@ -9,6 +9,9 @@ yarn add -D @tiffinger-thiel/eslint-config
 2. Setup your config files
 .eslintrc.js
 ```js
+// For yarn2 you will need this
+require('@rushstack/eslint-config/patch/modern-module-resolution');
+
 module.exports = {
   // Pick one profile.
   // Possible profiles:
@@ -37,6 +40,10 @@ module.exports = require('@tiffinger-thiel/eslint-config/prettier');
 {
   "scripts": {
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
+  },
+
+  "devDependencies": {
+    "@rushstack/eslint-config": "^2.5.1"
   }
 }
 ```
@@ -50,11 +57,17 @@ Example `.vscode/settings.json`:
   "eslint.packageManager": "yarn",
   "editor.formatOnSave": true,
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  }
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
 }
 ```
 
