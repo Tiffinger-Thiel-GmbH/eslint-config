@@ -76,6 +76,6 @@ Example `.vscode/settings.json`:
 Run following 
 
 ```bash
-npm run i
-npm run release
+yarn
+yarn release
 ```
