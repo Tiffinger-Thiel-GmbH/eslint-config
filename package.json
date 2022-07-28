@@ -15,19 +15,20 @@
     "release": "release-it"
   },
   "peerDependencies": {
-    "eslint": "^6.0.0 || ^7.0.0",
+    "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0",
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@rushstack/eslint-config": "^2.4.5",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^v3.3.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.3.2"
+    "@rushstack/eslint-config": "^2.6.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "release-it": "^14.11.7",
-    "typescript": "^4.4.2"
-  }
+    "eslint": "^8.20.0",
+    "release-it": "^15.1.2",
+    "typescript": "^4.7.4"
+  },
+  "packageManager": "yarn@3.2.1"
 }
