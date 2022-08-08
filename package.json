@@ -19,7 +19,7 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@rushstack/eslint-config": "^2.6.2",
+    "@rushstack/eslint-config": "^3.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
