@@ -4,7 +4,7 @@
 
 1. Install
 ```sh
-yarn add -D @tiffinger-thiel/eslint-config
+yarn add -D @tiffinger-thiel/eslint-config @rushstack/eslint-config eslint
 ```
 2. Setup your config files
 .eslintrc.js
@@ -41,10 +41,6 @@ module.exports = require('@tiffinger-thiel/eslint-config/prettier');
   "scripts": {
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
   },
-
-  "devDependencies": {
-    "@rushstack/eslint-config": "^2.5.1"
-  }
 }
 ```
 
@@ -54,7 +50,6 @@ Example `.vscode/settings.json`:
 ```json
 {
   "eslint.format.enable": true,
-  "eslint.packageManager": "yarn",
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
